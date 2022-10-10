@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+body {
+  font-family: "Titillium Web", sans-serif !important;
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: -0.29px;
+  color: #5c5c5c !important;
+  background-color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #d8d2d2;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+section {
+  padding: 30px 20px;
+}
+
+section p {
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.blue-background {
+  background-color: #027fc1;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+@media screen and (min-width: 701px) {
+  section {
+    padding: 80px 20px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+
+.fade-in-static {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.36, 0.69, 0.3, 0.64),
+    transform 1s cubic-bezier(0.36, 0.69, 0.3, 0.64);
+}
+
+.fade-in-static.in-viewport {
+  opacity: 1;
+}
+
+.fade-up {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.36, 0.69, 0.3, 0.64),
+    transform 1s cubic-bezier(0.36, 0.69, 0.3, 0.64);
+  transform: translateY(10%);
+}
+
+.fade-up.in-viewport {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.delay-25 {
+  transition-delay: 0.25s;
+}
+
+.delay-50 {
+  transition-delay: 0.5s;
+}
+
+.delay-100 {
+  transition-delay: 1s;
+}
