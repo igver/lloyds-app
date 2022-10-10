@@ -1,0 +1,2 @@
+# lloyds-app
+Lloyds zadatak
