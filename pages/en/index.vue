@@ -22,13 +22,28 @@
 
       <div class="socials">
         <a href="#" target="_blank"
-          ><img src="~assets/img/instagram-icon.svg" width="" height="" />
+          ><img
+            src="~assets/img/instagram-icon.svg"
+            width="12"
+            height="12"
+            alt="Instagram icon"
+          />
         </a>
         <a href="#" target="_blank"
-          ><img src="~assets/img/facebook-icon.svg" width="" height="" />
+          ><img
+            src="~assets/img/facebook-icon.svg"
+            width="12"
+            height="12"
+            alt="Faceboook icon"
+          />
         </a>
         <a href="#" target="_blank"
-          ><img src="~assets/img/linkedin-icon.svg" width="" height="" />
+          ><img
+            src="~assets/img/linkedin-icon.svg"
+            width="12"
+            height="12"
+            alt="Linkedin icon"
+          />
         </a>
       </div>
     </header>
@@ -205,7 +220,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("~assets/img/hero-background.jpg");
+  background-image: url("~assets/img/hero-background.webp");
   background-size: cover;
   background-position: center;
   height: 347px;
@@ -500,7 +515,7 @@ a:hover {
 }
 
 .new-offer .image-side {
-  background-image: url("~assets/img/offer.png");
+  background-image: url("~assets/img/offer.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -577,7 +592,7 @@ a:hover {
 }
 
 .clean .image-side {
-  background-image: url("~assets/img/robot-hospital.jpg");
+  background-image: url("~assets/img/robot-hospital.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right top;
