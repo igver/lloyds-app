@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
 
-  target: "static",
+  target: "server",
 
   head: {
     title:
@@ -21,6 +21,11 @@ export default {
         content: "X-UA-Compatible",
         name: "content",
         content: "IE=edge",
+      },
+      {
+        name: "description",
+        content:
+          "Vedras d.o.o. Vas ovim putem želi informirati o dostupnosti autonomnog UV-dezinfekcijskog robota tvrtke Blue Ocean Robotics.",
       },
       // { hid: "description", name: "description", content: "" },
       // { name: "format-detection", content: "telephone=no" },
