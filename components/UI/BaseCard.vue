@@ -23,6 +23,14 @@
   line-height: 32px;
 }
 
+.service ul {
+  margin-bottom: 50px;
+}
+
+.service ul li {
+  line-height: 1.5;
+}
+
 .cards .text-side p:last-child {
   margin-bottom: 0;
 }
@@ -46,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1011px) {
   .cards .text-side {
     width: 695px;
     height: 464px;

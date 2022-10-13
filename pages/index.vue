@@ -2,10 +2,16 @@
   <div class="wrapper">
     <header class="hero">
       <div class="contact-info">
-        <p>Kontaktirajte nas</p>
+        <p>{{ $t("Contact us") }}</p>
         <a class="mail" href="mailto:info@vedras.hr">info@vedras.hr</a>
         <a class="phone" href="tel:+385989608920">+385 98 9608 920</a>
-        <a href="/en/" class="lang">EN</a>
+        <nuxt-link
+          v-for="locale in availableLocales"
+          :key="locale.code"
+          :to="switchLocalePath(locale.code)"
+          class="lang"
+          >{{ locale.name }}</nuxt-link
+        >
       </div>
 
       <div class="logo">
@@ -51,16 +57,7 @@
     <section class="promo">
       <div v-in-viewport.once class="left-side fade-up">
         <p>
-          U jeku trenutne situacije sa Co-vid19, naša je “event” branša potpuno
-          zaustavljena. Zaista teško predviđamo početak velikih okupljanja i
-          zabava kave priliče ljetu na kakvog smo navikli. Unatoč privremenoj
-          stanci cijele event industrije, Vedras ne želi stajati po strani i
-          čekati da se ova pandemija sama od sebe završi, već smo kao što to
-          uvijek činimo, krenuli u nove pothvate i pobjede. Ovoga puta
-          predstavljamo nešto sasvim novo, nešto što nije povezano sa našim
-          uobičajenim poslovanjem. Predstavljamo nešto što će nam pomoći u borbi
-          protiv ove pandemije i učiniti da se svi što prije vratimo normalnom
-          životu.
+          {{ $t("In the midst") }}
         </p>
         <img
           src="~assets/img/uvd-robots-logo.jpg"
@@ -75,8 +72,7 @@
           height="64"
         />
         <p class="info">
-          Vedras d.o.o. Vas ovim putem želi informirati o dostupnosti autonomnog
-          UV-dezinfekcijskog robota tvrtke Blue Ocean Robotics.
+          {{ $t("We want to") }}
         </p>
       </div>
       <div class="right-side">
@@ -90,32 +86,48 @@
         />
 
         <div v-in-viewport.once class="blue-text fade-in-static delay-100">
-          <p>Ubija 99,99% mikroorganizama</p>
+          <p>{{ $t("kills 99") }}</p>
         </div>
       </div>
     </section>
 
     <section class="new-offer blue-background">
       <div class="text-side">
-        <h2>Novo u našoj ponudi!</h2>
+        <h2>{{ $t("New in our offer!") }}</h2>
         <p class="before-list">
-          Robotska dezinfekcija i sterilizacija prostora s primjenom u:
+          {{
+            $t(
+              "Secure robot disinfection and sterilization with applications in:"
+            )
+          }}
         </p>
         <ul>
-          <li>Turizmu (hoteli, apartmani, kuće za odmor, mobilne kućice...)</li>
-          <li>Industriji (tvornice, skladišta, pogoni...)</li>
           <li>
-            Javnim mjestima (domovi zdravlja, vrtići, škole, fakulteti, uredi,
-            zračne luke, kolodvori, fitness dvorane, šoping centri...)
+            {{
+              $t(
+                "Tourism (hotels, apartments, holiday homes, mobile homes ...)"
+              )
+            }}
+          </li>
+          <li>{{ $t("Industry (factories, warehouses, plants ...)") }}</li>
+          <li>
+            {{
+              $t(
+                "Public places (health centers, kindergartens, schools, colleges, offices, airports, stations, fitness gyms, shopping centers ...)"
+              )
+            }}
           </li>
         </ul>
         <p>
-          Roboti konstruirani za čišćenje operacijskih sala i laboratorija, sada
-          dezinficiraju vaše poslovne i privatne prostore.
+          {{
+            $t(
+              "Robots designed to clean operating rooms and laboratories are now disinfecting your business and private spaces."
+            )
+          }}
         </p>
-        <a href="https://uvd.blue-ocean-robotics.com/" target="_blank"
-          >Više detalja o UVD Robots</a
-        >
+        <a href="https://uvd.blue-ocean-robotics.com/" target="_blank">{{
+          $t("More details about UVD Robots")
+        }}</a>
       </div>
       <div v-in-viewport.once class="image-side fade-in-static delay-50"></div>
     </section>
@@ -124,13 +136,18 @@
       <base-card v-in-viewport.once class="fade-up delay-50">
         <h2>#covidfree</h2>
         <p>
-          Primjenom Ultraljubičastog svjetla, (ultravioletnog, UV-c), UVD-robot
-          uništava strukturu DNA u svim mikroorganizmima.
+          {{
+            $t(
+              "By applying ultraviolet light (UV, UV-c), the UVD robot destroys the structure of DNA in all microorganisms."
+            )
+          }}
         </p>
         <p>
-          Pružamo uslugu čišćenja velikih i malih prostora, uz pomoć robota,
-          koji u najkraćem mogućem roku i autonomno dezinficiraju zatvorene
-          prostore gdje sigurnost i “osjećaj čistoće” mora biti na prvom mjestu.
+          {{
+            $t(
+              "With help of robots, we provide a service for cleaning large and small spaces, which in the shortest possible time and autonomously disinfect indoors where safety and “sense of cleanliness” must come first."
+            )
+          }}
         </p>
       </base-card>
       <div v-in-viewport.once class="image-side fade-in-static"></div>
@@ -139,8 +156,11 @@
     <section class="clean blue-background">
       <div class="text-side">
         <h2>
-          Želite vašim klijentima i zaposlenicima pružiti potpuno čist prostor?
-          Kontaktirajte nas odmah, neka vaš prostor bude #covidfree!
+          {{
+            $t(
+              "You want to provide a secure place to stay or work for your costumers or employees. Search no more and contact us now. Let your spaces be #covidfree"
+            )
+          }}
         </h2>
       </div>
       <div class="image-side"></div>
@@ -149,26 +169,32 @@
     <base-card-section class="service">
       <base-card v-in-viewport.once class="fade-in-static delay-50">
         <h2>
-          Naše tehničko osoblje spremno je u najkraćem mogućem roku izvršiti
-          uslugu koja uključuje:
+          {{
+            $t(
+              "Our staff is ready to provide a service as soon as possible which includes:"
+            )
+          }}
         </h2>
         <ul>
-          <li>dopremu UV-dezinfekcijskog robota</li>
-          <li>mapiranje prostorija predviđenih za dezinfekciju</li>
-          <li>kontrolu rada tijekom dezinfekcije</li>
-          <li>otpremu UV-dezinfekcijskog robota</li>
+          <li>{{ $t("delivery of UV disinfection robot") }}</li>
+          <li>{{ $t("mapping of the rooms intended for disinfection") }}</li>
+          <li>{{ $t("control of operation during disinfection") }}</li>
+          <li>{{ $t("collection of the UV disinfection robot") }}</li>
         </ul>
         <download-button>
-          <a href="/vedras_dezinfekcija_uvd_robotima.pdf">Preuzmi brošuru</a>
+          <a href="/vedras_dezinfekcija_uvd_robotima.pdf">{{
+            $t("Download brochure")
+          }}</a>
         </download-button>
       </base-card>
       <div v-in-viewport.once class="image-side fade-up delay-25"></div>
     </base-card-section>
 
     <page-footer>
-      <p>Za više informacija pišite nam na mail:</p>
+      <p>{{ $t("Contact us for more:") }}</p>
       <p v-in-viewport.once class="fade-up">
-        <a href="mailto:info@vedras.hr">info@vedras.hr</a> ili nazovite broj
+        <a href="mailto:info@vedras.hr">info@vedras.hr</a>
+        {{ $t("or call us") }}
         <a href="tel:+385989608920">+385 98 9608 920</a>
       </p>
     </page-footer>
@@ -188,6 +214,11 @@ export default {
     BaseCardSection,
     BaseCard,
     DownloadButton,
+  },
+  computed: {
+    availableLocales() {
+      return this.$i18n.locales.filter((i) => i.code !== this.$i18n.locale);
+    },
   },
 };
 </script>
@@ -249,7 +280,7 @@ a:hover {
 }
 
 .hero .contact-info a.phone {
-  padding-right: 30px;
+  margin-right: 30px;
 }
 
 .hero .contact-info a.lang {
@@ -321,7 +352,7 @@ a:hover {
 
 @media screen and (min-width: 601px) {
   .hero .contact-info a.phone {
-    padding-right: 50px;
+    margin-right: 50px;
   }
 
   .hero .contact-info p {
@@ -432,7 +463,7 @@ a:hover {
     width: 100%;
     height: auto;
     margin-bottom: 30px;
-    margin-top: -32px;
+    margin-top: -50px;
   }
 }
 
@@ -442,7 +473,7 @@ a:hover {
   }
 
   .promo .right-side img {
-    margin-top: -40px;
+    margin-top: -50px;
   }
 }
 

@@ -4,6 +4,12 @@
   /* box-sizing: border-box; */
 }
 
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Titillium Web", sans-serif !important;
   font-size: 16px;
@@ -29,6 +35,10 @@ p {
 
 ul {
   padding-left: 20px;
+}
+
+img {
+  vertical-align: middle;
 }
 
 section {

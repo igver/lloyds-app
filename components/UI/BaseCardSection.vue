@@ -45,10 +45,16 @@
   }
 }
 
-@media screen and (min-width: 1001px) {
+@media screen and (min-width: 1011px) {
   .cards {
     flex-direction: row;
     column-gap: 20px;
+  }
+
+  .cards.service .text-side {
+    width: 39vw;
+    height: 64.26vh;
+    padding: 0 50px;
   }
 
   .cards .text-side {
@@ -126,9 +132,10 @@
     width: 39vw;
     height: 64.26vh;
     margin-right: 50px;
+    padding: 0 50px;
   }
 
-  .service .image-side {
+  .cards.service .image-side {
     order: 2;
     height: 64.26vh;
     width: 30.21vw;
