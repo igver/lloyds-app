@@ -12,7 +12,7 @@
 }
 
 .cards .image-side {
-  background-image: url("~assets/img/robot.jpg");
+  background-image: url("~assets/img/robot.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -21,9 +21,10 @@
 }
 
 .service .image-side {
-  background-image: url("~assets/img/robot-in-use.jpg");
+  background-image: url("~assets/img/robot-in-use.webp");
   height: 64.26vh;
   background-position: center 80%;
+  padding: 1px;
 }
 
 @media screen and (min-width: 701px) {
@@ -87,7 +88,7 @@
 }
 
 .service .image-side {
-  background-image: url("~assets/img/robot-in-use.jpg");
+  background-image: url("~assets/img/robot-in-use.webp");
   height: 64.26vh;
   background-position: center 80%;
 }

@@ -59,14 +59,18 @@
         <p>
           {{ $t("In the midst") }}
         </p>
-        <img
-          src="~assets/img/uvd-robots-logo.jpg"
+        <nuxt-img
+          format="webp"
+          quality="85"
+          src="/uvd-robots-logo.jpg"
           alt="UVD Robots logo"
-          width="303"
-          height="161"
+          width="304"
+          height="153"
         />
-        <img
-          src="~assets/img/boston-medical-logo.jpg"
+        <nuxt-img
+          format="webp"
+          quality="85"
+          src="/boston-medical-logo.jpg"
           alt="Boston medical logo"
           width="367"
           height="64"
@@ -76,10 +80,12 @@
         </p>
       </div>
       <div class="right-side">
-        <img
+        <nuxt-img
+          format="webp"
+          quality="85"
           v-in-viewport.once
           class="right-side fade-in-static"
-          src="~assets/img/dez-robot.png"
+          src="/dez-robot.png"
           alt="UV-dezinfekcijskog robot"
           width="599"
           height="534"

@@ -35,6 +35,12 @@ export default {
     link: [
       {
         rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+    ],
+    link: [
+      {
+        rel: "preconnect",
         href: "https://fonts.gstatic.com",
         crossorigin: "anonymous",
       },
@@ -76,7 +82,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  modules: ["@nuxtjs/i18n"],
+  modules: ["@nuxtjs/i18n", "@nuxt/image"],
 
   i18n: {
     locales: [
