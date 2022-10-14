@@ -24,7 +24,6 @@
   background-image: url("~assets/img/robot-in-use.webp");
   height: 64.26vh;
   background-position: center 80%;
-  padding: 1px;
 }
 
 @media screen and (min-width: 701px) {
